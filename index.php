@@ -5,9 +5,9 @@ require_once 'app/controllers/imprint.php';
 require_once 'app/controllers/policy.php';
 require_once 'app/controllers/contact.php';
 
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+include './config.php';
 
-switch ($page) {
+switch ($current_page) {
     case 'policy':
         $controller = new PolicyController();
         $controller->content();
